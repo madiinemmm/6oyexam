@@ -1,0 +1,32 @@
+ * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+ }
+
+ 
+ input {
+    padding: 7px;
+    width: 240px;
+    border-radius: 5px;
+    border: 1px solid #d2d2d7;
+    outline: none;
+}
+
+label {
+    color: #4b4b4c;
+}
+
+select {
+    padding: 7px;
+    padding: 7px;
+    width: 240px;
+    border-radius: 5px;
+    border: 1px solid #d2d2d7;
+}
+
+
+
+
+
+
