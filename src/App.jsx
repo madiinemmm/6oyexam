@@ -8,6 +8,7 @@ import ErrorPage from './pages/ErrorPage'
 
 
 import './App.css'
+import ProductDetails from './pages/ProductDetails'
 
 function App() {
 
@@ -21,6 +22,7 @@ function App() {
     <Route path="/products" element={<Products></Products>}></Route>
     <Route path="/cart" element={<Cart></Cart>}></Route>  
     <Route path="*" element={<ErrorPage></ErrorPage>}></Route>
+    <Route path='/product/:id' element={<ProductDetails></ProductDetails>}></Route>
    </Routes>
 </>
   )

@@ -1,15 +1,13 @@
 import React, { useEffect, useState } from "react";
+import { NavLink } from "react-router-dom";
 
 import Carousel from "../../assets/carousel.webp";
 import apiImage from "../../assets/apiImage.webp";
 import styles from "./index.module.css";
 import Header from "../Home/Header";
 import Navbar from "../Navbar";
-
-
 function Home() {
   const [cards, setCards] = useState([]);
-
   useEffect(() => {
     fetch("https://strapi-store-server.onrender.com/api/products?featured=true")
       .then((res) => res.json())
@@ -19,7 +17,6 @@ function Home() {
       .catch((err) => console.log(err))
      
   }, []);
-
   return (
     <div className="container">
       <div className="navbar_" style={{ backgroundColor: "#021431", padding: "8px" }}>
@@ -47,7 +44,9 @@ function Home() {
                 Tempore repellat explicabo enim soluta temporibus asperiores{" "}
                 <br /> aut obcaecati perferendis porro nobis.
               </p>
-              <button style={{
+              <button >
+                <NavLink to={"/products"} style={{
+                  position: "absolute",
                 padding: "15px",
                 border: "none",
                 backgroundColor: "#057AFF",
@@ -58,9 +57,10 @@ function Home() {
                 cursor: "pointer",
                 letterSpacing: "0.5px",
                 fontWeight: "600",
-                marginTop: "50px",
-              }}>
-                OUR PRODUCTS
+                marginTop: "30px"
+                 
+              }}>OUR PRODUCTS</NavLink>
+                
               </button>
             </div>
             <div>
