@@ -156,6 +156,7 @@ marginTop: "100px",
 gap: "80px",
 cursor: "pointer",
 
+
 }}>
 {card && 
   card.map((el, index) => {
